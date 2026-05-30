@@ -1,7 +1,5 @@
 # Business Analytics Process 
 
-# Introduction 
-
 These are the homework files from Business Analytics Process course. 
 
 Highlights of the course: Python, Business Analysis in Python, Ollama Langchain, Prompt engineering, and LLM framework.
