@@ -1,0 +1,123 @@
+# Answer to Question 1
+
+# Print the "_" 20 times to create the start of a table
+print("_" * 20)
+
+# Print the word "Celsius" and make it left-aligned using <10
+# Use end = "", so I can type "Fahrenheit" in the same line
+print(f"{'Celsius':<10}", end = "")
+
+# Print the word "Fahrenheit" and make it right-aligned using >10
+print(f"{'Fahrenheit':>10}")
+
+# Create a for loop to calculate the Fahrenheit for each Celsius from 0 to 20
+for celsius in range(21):
+
+    # Calculate the fahrenheit using the given formula
+    fahrenheit = ((9/5) * celsius) + 32
+
+    # Display the Celsius and the Fahrenheit
+    print(f"{celsius:^10}", end = "")
+    print(f"{fahrenheit:^10.2f}")
+
+# Print the "_" 20 times to end the table
+print("_" * 20)
+
+# Answer to Question 2
+
+# Initiate the sum to be 0
+sum = 0
+
+# Asks the user for a positive number input and enter a negative number to quit
+num = float(input("Enter a positive number to add in the sum, enter a negative number to quit: "))
+
+# Use a while loop to keep adding the number to the "sum" variable.
+# Once the user enter a negative number, then the program will stop and display the sum of all the positive numbers
+# that were entered
+while not (num < 0):
+    
+    # Increment sum by the number that was input by the user
+    sum += num
+
+    # Asks the user for a positive number input and enter a negative number to quit
+    num = int(input("Enter a positive number to add in the sum, enter a negative number to quit: "))
+
+# Display the sum of the positive numbers
+print(f"The sum of the positive numbers are {sum:.2f}.")
+
+# Answer to Question 3
+
+# Initiate a factorial variable to be 1 because we will be multiplying.
+# If the variable is 0, then the product would be 0
+factorial = 1
+
+# Asks the user to input a positive integer that they want to calculate the factorial of
+num_input = int(input("Enter a positive integer(less than 10) for factorial calculation: "))
+
+# Use a while loop to check if the user input a positive integer, a negative integer, 
+# or an integer that is more than or equal to 10
+# If the user input a negative integer or an integer that is more than or equal to 10, 
+# this while loop will run until the user enter a positive integer that is less than 10
+while num_input < 0 or num_input >= 10:
+
+    # Display an error message for a negative number
+    if num_input < 0:
+        print("Error: You entered a negative number.")
+
+    # Display an error message for a number that is more than or equal to 10
+    elif num_input >= 10:
+        print("Error: You entered a number that is more than 10.")
+
+    # Asks the user for a positive integer that is less than 10 for factorial calculation
+    num_input = int(input("Please enter a positive integer(less than 10) for factorial calculation: "))
+
+# Use a for loop to calculate the factorial, going from 1 to the input number
+for i in range(1, num_input + 1):
+
+    # Multiply every number from 1 to the input number and store it in the factorial variable
+    factorial *= i
+
+# Display the final result of the factorial
+print(f"The factorial of {num_input} is {factorial}.")
+
+# Answer to Question 4
+
+# Initiate the tuition & the percent increase variable
+tuition = 8000
+increase = 0.03
+
+# Create a for loop that goes from 1 to 5 years
+for year in range(1,6):
+
+    # In each iteration, increment the current tuition by the 3% increase of tuition
+    tuition += (increase * tuition)
+
+    # Display the current year's tuition fees
+    print(f"The projected tuition fees after {year} year(s) is ${tuition:.2f}.")
+
+# Answer to Question 5
+
+# Initiate a loop variable and an inner variable to be 7
+# Because the output of this question has 7 lines and starts with 7 asterisks
+loop = 7
+inner = 7
+
+# Use nested loop to create the output shown in the question
+# Use the outside loop to loop 7 times because we had 7 lines in the output
+for i in range(loop):
+
+    # Use the inside loop to create the asterisks
+    for j in range(loop):
+
+        # Starts with 7 asterisks
+        print("*" * inner)
+
+        # Decrease the asterisk by 1
+        inner -= 1
+
+        # Break the inner loop and go back to the outer loop
+        break
+
+
+
+
